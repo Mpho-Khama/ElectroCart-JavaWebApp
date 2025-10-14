@@ -1,0 +1,153 @@
+/* ====== Page Base ====== */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  margin-left: 220px;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* ====== Form Container ====== */
+.edit-form-container {
+  background: #fff;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.edit-form-container:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.edit-form-container h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ====== Form Inputs ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dcdfe3;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  outline: none;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* ====== Image Preview ====== */
+.image-preview {
+  text-align: center;
+}
+
+.image-preview img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #eee;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ====== Buttons ====== */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.save-btn {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #219150;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ====== Success & Error Messages ====== */
+.message {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.message.success {
+  background-color: #eafaf1;
+  color: #2e7d32;
+  border: 1px solid #b8e0c8;
+}
+
+.message.error {
+  background-color: #fdecea;
+  color: #c62828;
+  border: 1px solid #f5c6cb;
+}

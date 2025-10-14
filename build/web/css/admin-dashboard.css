@@ -1,0 +1,220 @@
+/* =========================
+   Global Styles
+   ========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* =========================
+   Sidebar
+   ========================= */
+.sidebar {
+    width: 220px;
+    background-color: #1a1a2e;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #007bff;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   Main Content
+   ========================= */
+.main-content {
+    margin-left: 220px;
+    padding: 30px;
+    width: calc(100% - 220px);
+    transition: all 0.3s ease;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+/* =========================
+   Dashboard Cards
+   ========================= */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* =========================
+   Responsive Styles
+   ========================= */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 180px;
+        padding: 25px 15px;
+    }
+    .main-content {
+        margin-left: 180px;
+        padding: 25px;
+        width: calc(100% - 180px);
+    }
+    .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 15px 0;
+    }
+    .sidebar h2 {
+        display: none; /* hide title on small screens */
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .card i {
+        font-size: 2rem;
+    }
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+/* Make card links look like cards */
+.dashboard a.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* remove underline */
+    color: inherit; /* inherit text color */
+    transition: all 0.3s ease;
+}
+
+.dashboard a.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Keep the internal styling same */
+.dashboard a.card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.dashboard a.card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+}
+
+.dashboard a.card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
