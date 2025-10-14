@@ -25,25 +25,30 @@ public class LoginServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
 
-                String sql = "SELECT * FROM users WHERE email=?";
+                String sql = "SELECT * FROM users WHERE email = ?";
                 PreparedStatement ps = conn.prepareStatement(sql);
                 ps.setString(1, email);
                 ResultSet rs = ps.executeQuery();
 
                 if (rs.next()) {
                     String hashedPassword = rs.getString("password");
+                    String role = rs.getString("role");
+                    String name = rs.getString("name"); // fetch name from DB
 
                     if (BCrypt.checkpw(password, hashedPassword)) {
-                        String role = rs.getString("role");
-
-                        HttpSession session = request.getSession();
+                        // Create session and store attributes
+                        HttpSession session = request.getSession(true);
+                        session.setAttribute("user_id", rs.getInt("user_id"));
+                        session.setAttribute("userName", name);  // store name for both admin & user
                         session.setAttribute("email", email);
                         session.setAttribute("role", role);
 
-                        if ("ADMIN".equals(role)) {
+                        // Optional: keep old adminUser key for backward compatibility
+                        if ("ADMIN".equalsIgnoreCase(role)) {
+                            session.setAttribute("adminUser", name);
                             response.sendRedirect("admin-dashboard.jsp");
                         } else {
-                            response.sendRedirect("index.jsp");
+                            response.sendRedirect("profile.jsp");
                         }
                     } else {
                         request.setAttribute("error", "Invalid email or password");

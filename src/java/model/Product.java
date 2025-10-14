@@ -6,6 +6,9 @@ package model;
  * @author Mpho Khama
  */
 public class Product {
+
+    public Product(int aInt, String string, String string1, String string2, double aDouble, int aInt1, String string3, String string4) {
+    }
 private int productId;
     private String name;
     private String description;

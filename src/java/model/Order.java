@@ -1,18 +1,20 @@
-
 package model;
+
 import java.util.Date;
+
 /**
  *
  * @author Mpho Khama
  */
 public class Order {
-    
-private int orderId;
+
+    private int orderId;
     private int userId;
     private Date orderDate;
-    private String status;       // PLACED, SHIPPED, DELIVERED, 
+    private String status;          // PLACED, SHIPPED, DELIVERED, CANCELLED
     private double totalAmount;
-    private String paymentMethod; // M-PESA, EcoCash, Card, Bank
+    private String paymentMethod;   // M-PESA, EcoCash, Card, Bank
+    private String trackingCode;    // NEW FIELD
 
     // Getters and setters
     public int getOrderId() { return orderId; }
@@ -32,5 +34,7 @@ private int orderId;
 
     public String getPaymentMethod() { return paymentMethod; }
     public void setPaymentMethod(String paymentMethod) { this.paymentMethod = paymentMethod; }
-}
 
+    public String getTrackingCode() { return trackingCode; }
+    public void setTrackingCode(String trackingCode) { this.trackingCode = trackingCode; }
+}

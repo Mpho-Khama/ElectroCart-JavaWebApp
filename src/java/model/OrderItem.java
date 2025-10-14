@@ -1,16 +1,12 @@
-
 package model;
 
-/**
- *
- * @author Mpho Khama
- */
 public class OrderItem {
- private int orderItemId;
+    private int orderItemId;
     private int orderId;
     private int productId;
     private int quantity;
     private double price;
+    private String productName; // new field
 
     // Getters and setters
     public int getOrderItemId() { return orderItemId; }
@@ -27,4 +23,7 @@ public class OrderItem {
 
     public double getPrice() { return price; }
     public void setPrice(double price) { this.price = price; }
+
+    public String getProductName() { return productName; }
+    public void setProductName(String productName) { this.productName = productName; }
 }

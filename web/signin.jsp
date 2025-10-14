@@ -12,7 +12,7 @@
 <div class="login-container">
     <h2>Sign In</h2>
 
-    <!-- Display error if login fails -->
+   
     <c:if test="${not empty error}">
         <div class="error-message" style="color:red;">
             ${error}
