@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/web/index.jsp</file>
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/web/signin.jsp</file>
+            <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/src/java/controller/CreateStripeSessionServlet.java</file>
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/web/admin-orders.jsp</file>
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/web/view-previous-orders.jsp</file>
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/src/java/controller/EmailUtil.java</file>
@@ -13,7 +14,6 @@
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/src/java/controller/PlaceOrderServlet.java</file>
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/web/profile.jsp</file>
             <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/web/about-us.jsp</file>
-            <file>file:/C:/Users/Mpho%20Khama/Desktop/Electrocard/pom.xml</file>
         </group>
     </open-files>
 </project-private>
