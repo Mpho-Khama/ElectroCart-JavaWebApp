@@ -16,8 +16,9 @@ import java.io.IOException;
 @WebServlet("/CreateStripeSessionServlet")
 public class CreateStripeSessionServlet extends HttpServlet {
 
-    // Replace the hardcoded key with an environment variable
+// Replace the hardcoded key with an environment variable
 private static final String STRIPE_SECRET_KEY = System.getenv("STRIPE_SECRET_KEY");
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
